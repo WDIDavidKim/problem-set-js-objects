@@ -1,3 +1,29 @@
+function splitString(stringToSplit) {
+  var arrayOfStrings = stringToSplit.split('');
+  var sortedString = arrayOfStrings.sort();
+  var current = null;
+  var count = 0;
+  for (var i = 0; i < sortedString.length; i++) {
+      if (sortedString[i] != current) {
+          if (count > 0) {
+                console.log(current + ' = ' + count);
+              }
+              current = sortedString[i];
+              count = 1;
+          } else {
+              count++;
+          }
+      }
+      if (count > 0) {
+          console.log(current + ' = ' + count);
+
+    }
+}
+
+// document.write
+// function letterCount(words){
+//   for (var i = 0; i > words.length; i++){
+
 /*
 
   Create a function `letterCount` that accepts a string, and finds the number of times each letter
