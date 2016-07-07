@@ -1,3 +1,8 @@
+function daysUntilDate(dateRequested){
+  return Math.round((new Date(dateRequested) - Date.new())/86400000);
+}
+
+//.split
 /*
 
   Create a function `daysUntilDate` that accepts a string (with the format `"mm/dd/yyyy"`) and

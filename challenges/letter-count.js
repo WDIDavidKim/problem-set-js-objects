@@ -1,4 +1,4 @@
-function splitString(stringToSplit) {
+function stringCount(stringToSplit) {
   var arrayOfStrings = stringToSplit.split('');
   var sortedString = arrayOfStrings.sort();
   var current = null;
@@ -7,6 +7,7 @@ function splitString(stringToSplit) {
       if (sortedString[i] != current) {
           if (count > 0) {
                 console.log(current + ' = ' + count);
+                console.log(current + ' = ' + count/sortedString.length);
               }
               current = sortedString[i];
               count = 1;
@@ -16,9 +17,10 @@ function splitString(stringToSplit) {
       }
       if (count > 0) {
           console.log(current + ' = ' + count);
-
-    }
+          console.log(current + ' = ' + count/sortedString.length);
+      }
 }
+//notes
 
 // document.write
 // function letterCount(words){
