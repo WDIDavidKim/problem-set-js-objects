@@ -1,3 +1,18 @@
+function parseQueryString(str) {
+    if (typeof str !== 'string') {
+        return {};
+    }
+    str = str.trim().replace(/^\?/, '');
+    if (!str) {
+        return {};
+    }
+    return str.trim().split('&').reduce(function (ret, param) {
+        var parts = param.replace(/\+/g, ' ').split('=');
+        ret[parts[0]] = parts[1] === undefined ? null : decodeURIComponent(parts[1]);
+        return ret;
+    }, {});
+}
+
 /*
 
   Create a function `parseQueryString` that accepts a query string parameter as an argument, and

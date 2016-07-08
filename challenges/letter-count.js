@@ -1,26 +1,26 @@
 function stringCount(stringToSplit) {
-  var arrayOfStrings = stringToSplit.split('');
-  var sortedString = arrayOfStrings.sort();
+  var arrayOfStrings = stringToSplit.split('');//splits into array
+  var sortedString = arrayOfStrings.sort();//sorts array alphabetically
   var current = null;
   var count = 0;
   for (var i = 0; i < sortedString.length; i++) {
       if (sortedString[i] != current) {
           if (count > 0) {
                 console.log(current + ' = ' + count);
-                console.log(current + ' = ' + count/sortedString.length);
+                console.log(current + ' = ' + count/sortedString.length);//% bonus
               }
-              current = sortedString[i];
-              count = 1;
+              current = sortedString[i];//
+              count = 1;//if only one character
           } else {
-              count++;
+              count++;//adds on
           }
       }
       if (count > 0) {
-          console.log(current + ' = ' + count);
-          console.log(current + ' = ' + count/sortedString.length);
+          console.log(current + ' = ' + count);//puts out repetition value
+          console.log(current + ' = ' + count/sortedString.length);//% bonus
       }
 }
-//notes
+//notesc
 
 // document.write
 // function letterCount(words){

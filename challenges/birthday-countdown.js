@@ -1,8 +1,9 @@
-function daysUntilDate(dateRequested){
-  return Math.round((new Date(dateRequested) - Date.new())/86400000);
+function daysUntilDate(date){
+    var storeDate = date;//gets date from user
+    var newDate = Math.round((Date.parse(storeDate) - Date.now())/86400000);//future date - current date / ms in a day
+    return newDate;
 }
 
-//.split
 /*
 
   Create a function `daysUntilDate` that accepts a string (with the format `"mm/dd/yyyy"`) and
